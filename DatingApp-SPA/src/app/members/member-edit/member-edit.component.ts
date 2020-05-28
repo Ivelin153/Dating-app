@@ -14,7 +14,8 @@ import { AuthService } from 'src/app/_services/auth.service';
 export class MemberEditComponent implements OnInit {
   @ViewChild('editForm', { static: true }) editForm: NgForm;
   user: User;
-  photoUrl: string;
+  photoUrl: string;  
+  live = false;
 
   @HostListener('window:beforeunload', ['$event'])
   unloadNotification($event: any) {
